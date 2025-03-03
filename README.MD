@@ -8,7 +8,7 @@ This application was created so that users can better understand the differences
 
 ## 3. Build docker image
     
-    docker pull vllm/vllm-openai:latest <meta-llama/Llama-3-8b (new) OR meta-llama/Llama-2-7b (old:version 2 and earlier)>
+    docker pull vllm/vllm-openai:latest
     docker build -f Dockerfile_frontend -t your-registry/image-name:version .
 
 ## 4. Start the vLLM-powered inference API
