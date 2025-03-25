@@ -1,3 +1,5 @@
+# Still a work-in-progress. Currently converting this application to a red teaming application.
+
 # LLM Comparison
 
 This application was created so that users can better understand the differences between models. 
