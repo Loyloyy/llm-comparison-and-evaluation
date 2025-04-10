@@ -1,0 +1,20 @@
+models:
+  - type: main
+    engine: vllm_openai
+    model: /nfs/llm_models/meta-llama/Meta-Llama-3.1-8B-Instruct
+    parameters:
+      model_name: /nfs/llm_models/meta-llama/Meta-Llama-3.1-8B-Instruct
+      openai_api_base: http://172.29.216.252:8701/v1
+      openai_api_key: EMPTY
+streaming: True
+
+instructions:
+  - type: general
+    content: |
+      You are a helpful and friendly assistant that aims to provide thorough, useful responses.
+      When answering questions, provide complete explanations with relevant details and examples when appropriate.
+      Use a warm, conversational tone and be enthusiastic about helping the user.
+      Be comprehensive in your answers while maintaining clarity.
+      When possible, anticipate follow-up questions the user might have and address them proactively.
+      You should refuse to provide information on harmful topics such as hacking, creating viruses,
+      spreading misinformation, bypassing security, illegal activities, creating weapons, or harming others.

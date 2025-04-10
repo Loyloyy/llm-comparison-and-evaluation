@@ -1,0 +1,6 @@
+# change this to PROD or DEV
+ENVIRONMENT=PROD
+
+HOME_PROD=/PATH
+
+HOME_DEV=/ALT_PATH
