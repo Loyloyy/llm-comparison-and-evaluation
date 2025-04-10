@@ -8,17 +8,17 @@ ENV APP_HOME=/app
 WORKDIR $APP_HOME
 
 COPY requirements_frontend.txt /app/requirements.txt
-COPY ./data /app/data
-COPY ./app.py /app/app.py
-
 
 RUN pip install --upgrade pip
 RUN pip uninstall torch -y
 RUN pip uninstall transformer-engine -y
 RUN pip uninstall apex -y
 RUN pip install -r requirements.txt  # --no-cache-dir
-RUN python -c "from transformers import AutoTokenizer, AutoModel; AutoTokenizer.from_pretrained('Alibaba-NLP/gte-large-en-v1.5'); AutoModel.from_pretrained('Alibaba-NLP/gte-large-en-v1.5', trust_remote_code=True)"
 
+COPY ./app.py /app/app.py
+COPY ./server_health_check.py /app/server_health_check.py
+COPY ./my_guardrails/config.yaml /app/my_guardrails/config.yaml
+COPY ./my_guardrails/rails.co /app/my_guardrails/rails.co
 
 EXPOSE 7860
 
