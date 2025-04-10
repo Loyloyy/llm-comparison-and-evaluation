@@ -29,17 +29,19 @@ Red teaming is the practice of testing AI systems by simulating adversarial inpu
 ## 🚀 Getting Started
 
 1. Git clone this repository
-2. Build docker image
-```
-    docker pull vllm/vllm-openai:latest
-    docker build -f Dockerfile_frontend -t your-registry/image-name:version .
-```
-3. Configure your environment variables in a .env file with the help of .env.template:
+2. Configure your environment variables in a .env file with the help of .env.template:
 ```
     ENVIRONMENT=DEV # or PROD
     HOME_DEV=/path/to/dev/directory
     HOME_PROD=/path/to/prod/directory
 ```
+2.X (Optional) Update the models.model and models.parameters.model_name/openai_api_base in my_guardrails/config.yaml. This will be updated by the the script during model selection too. 
+
+3. Build docker image
+```
+    docker pull vllm/vllm-openai:latest
+    docker build -f Dockerfile_frontend -t your-registry/image-name:version .
+``` 
 4. Make sure your VLLM servers are running and properly configured in the model configuration files. Usage of SGLang servers are also possible, requires minimal changes to this script. :)
 ```
     docker run --gpus "device=0" --cpus="16" --memory="16g" --shm-size="8gb" \
