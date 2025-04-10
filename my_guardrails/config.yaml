@@ -1,10 +1,10 @@
 models:
   - type: main
     engine: vllm_openai
-    model: /nfs/llm_models/meta-llama/Meta-Llama-3.1-8B-Instruct
+    model: <model_path>
     parameters:
-      model_name: /nfs/llm_models/meta-llama/Meta-Llama-3.1-8B-Instruct
-      openai_api_base: http://172.29.216.252:8701/v1
+      model_name: <model_path>
+      openai_api_base: http://localhost:8701/v1
       openai_api_key: EMPTY
 streaming: True
 
