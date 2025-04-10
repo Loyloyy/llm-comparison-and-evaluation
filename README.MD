@@ -2,6 +2,15 @@
 
 This application provides a user-friendly interface for red teaming, comparing, and evaluating large language models (LLMs). It's designed to help both technical and non-technical users assess model behavior, particularly in response to potentially harmful queries.
 
+## 🛡️ About Red Teaming and Safety Evaluation
+
+Red teaming is the practice of testing AI systems by simulating adversarial inputs to identify potential vulnerabilities. This tool helps you:
+
+- Assess how different models respond to potentially harmful requests
+- Compare base models against versions with safety measures
+- Evaluate the effectiveness of guardrails and prompt-based safety techniques
+- Document model responses for safety auditing and improvement
+
 ## 🌟 Key Features
 
 - **Side-by-side Model Comparison**: Compare responses from two different LLMs in real-time
@@ -49,3 +58,18 @@ This application provides a user-friendly interface for red teaming, comparing, 
         your-registry/image-name:version
 ```
 6. Access the web interface at http://localhost:7860
+
+## 💡 How to Use
+### Basic Usage
+
+1. Select two models from the dropdown menus at the top of the interface
+2. Type your query in the text box at the bottom
+3. Click "Submit" or press Enter
+4. View the responses from both models side-by-side
+
+## Advanced Features
+
+- Custom Prompt Templates: Enable "Use Prompt Template" and modify the template text to add custom instructions to the model
+- Toggle Guardrails: Use the checkbox in the "Model Settings" accordion to enable/disable NVIDIA NeMo Guardrails for each model
+- Example Queries: Use the provided example red team questions to quickly test model safety responses
+- Server Health: Click the "Refresh Models" button to update the list of available models and check server health
